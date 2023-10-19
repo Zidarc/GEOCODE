@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/blog.css">
+    <title>Recipe List Book</title>
+</head>
+<body>
+    <div class="container">
+        <img src="../assets/images/Cooking-Logo-design-template-vector.jpg" width="80px" height="80px" class="image">
+        <h1>Recipe List Book</h1>
+    </div>
+    <main>
+        <section id="recipe-section">
+            <div id="search-filter">
+                <input type="text" id="searchInput" placeholder="Search by Name" >
+                <select id="filterDropdown">
+                    <option value="">All</option>
+                    <option value="Spaghetti">Spaghetti</option>
+                    <option value="Chicken">Chicken</option>
+                    <!--more ingredient as needed -->
+                </select>
+                <button onclick="filterRecipes()">Apply</button>
+            </div>
+                <h2>Recipes</h2>
+            <ul id="recipe-list">
+                <!-- Recipe items will be added here dynamically -->
+            </ul>
+            <input type="text" id="recipeNameInput" placeholder="Enter the recipe name">
+            <input type="text" id="recipeItemInput" placeholder="Enter the list of items required">
+            <button onclick="addRecipe()">Add Recipe</button>
+        </section>
+    </main>
+    <script src="../assets/js/blog.js"></script>
+</body>
+</html>

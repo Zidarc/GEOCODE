@@ -1,0 +1,111 @@
+.team-body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+}
+
+.title h1{
+    font-size: 36px;
+    margin-left: auto;
+    margin-right:auto;
+    text-align: center;
+    color: #ffffff;
+}
+
+.intro {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 15px;
+    width: 220px;
+    border-radius: 15px;
+    margin: 15px;
+    border: 1px solid white;
+    color:white;
+    transition: transform 0.3s ease;
+}
+
+.name > p {
+    font-size: 16px;
+    color: white;
+}
+
+.display-pic > img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10%;
+}
+
+.intro:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+}
+
+.team-page {
+    width: 100%;
+    background-color: #000000;
+    background-image: url('./images/stars.png');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+.socials > a {
+    color: white;
+}
+
+.instagram:hover {
+    color: #962fbf;
+}
+
+.discord:hover {
+    color: #5865F2;
+}
+
+.github:hover {
+    color: #1c1e20;
+}
+
+.facebook:hover {
+    color : #415fa1 ; 
+}
+
+.socials {
+    display: flex;
+    justify-content: space-around;
+}
+
+.socials > a {
+    margin-right: 10px;
+}
+
+.name > h3 {
+    margin-bottom: 2px;
+    text-align: center;
+}
+
+.name > p {
+    margin-top: 2px;
+    text-align: center;
+}
+
+.meet-main {
+    display: flex;
+    justify-content: center;
+    align-items: space-between;
+    flex-wrap: wrap;
+}
+
+.lead {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.display-pic > img {
+    border: 1px solid white;
+}

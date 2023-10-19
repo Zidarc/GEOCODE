@@ -1,0 +1,160 @@
+:root {
+    --primary-color: #4169E1;     /* Royal Blue */
+    --secondary-color: #1b0047;    /* White */
+    --accent-color: #FFD700;       /* Gold */
+    --background-color: #F5F5F5;  /* Light Gray */
+    --text-color: #333333;         /* Dark Gray */
+    --highlight-color: #008080;    /* Teal */
+    --neutral-color: #C0C0C0;
+}
+
+body, h1, h2, ul, li, p, button {
+    margin: 0 0;
+    padding: 0 0;
+}
+
+/* Basic styling for the page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: #333;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 70%;
+    padding: 20px;
+    ;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 1.25rem;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 25%;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+#recipeNameInput{
+    width: 200px;
+}
+#recipeItemInput{
+    width: 400px;
+}
+.image {
+    position:absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.container {
+    position: relative; /* Make the container a positioning context */
+    background-color: #96c8fd; /* Optional: Add a background color to the container */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    color: #000000
+    
+}
+/* Add transition to li elements */
+li {
+    background-color: #ffe8ca;
+    border: 1px solid #000000;
+    padding: 10px;
+    margin: 10px 0;
+    transition: transform 0.3s ease;
+}
+
+li:hover {
+    transform: scale(1.05);
+}
+
+input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="text"]::placeholder {
+    color: #999;
+}
+
+input[type="text"]:hover {
+    border-color: #666;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Style for the button */
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #002c5c;
+    transition:background-color 0.8s ease;
+}
+
+#filterDropdown {
+    appearance: none; /* Remove default browser styles */
+    padding: 10px; /* Adjust padding as needed */
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 15%; /* Make the select element full width */
+    cursor: pointer;
+    background-color: #fff; /* Background color */
+}
+
+
+#filterDropdown:hover {
+    border-color: #666;
+}
+
+#filterDropdown:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255,0.5);
+}
+
+#filterDropdown option {
+    background-color: #fff; /* Background color of options */
+    color: #333; /* Text color of options */
+}
+
+#filterDropdown option:checked {
+    background-color: #007bff; /* Background color of selected option */
+    color: #fff; /* Text color of selected option */
+}
+
