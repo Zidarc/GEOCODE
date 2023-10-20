@@ -1,0 +1,220 @@
+/* Import Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+/* Define CSS Variables */
+:root {
+    /* Color variables */
+    --primary-color: #4169E1;
+    --secondary-color: #1b0047;
+    --accent-color: #FFD700;
+    --background-color: #F5F5F5;
+    --text-color: #333333;
+    --highlight-color: #008080;
+    --neutral-color: #C0C0C0;
+    --line-height: 1.7rem;
+    --normal-font: 400;
+    --bold-font: 600;
+    --bolder-font: 900;
+}
+
+/* Reset Default Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base Styles */
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+/* Header Styles */
+nav {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    box-shadow: 2px 3px 2px #f1f1f1;
+}
+
+.nav-item {
+    margin-left: 2rem;
+}
+
+.nav-link {
+    font-weight: var(--bold-font);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+/* Responsive Styles for Header */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .nav-item {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+
+    ul {
+        flex-direction: column;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+    p {
+        font-size: 5px;
+    }
+}
+p {
+    font-size: 20px;
+}
+/*Footer*/
+footer {
+    border-top: 1px solid #f1f1f1;
+    box-shadow: 0px -2px 3px #f1f1f1;
+    text-align: center;
+    padding: 2rem;
+}
+
+/*Light and Dark*/
+.theme-switch {
+    padding-left: 1rem;
+}
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+.label {
+    width: 50px;
+    height: 29px;
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 30px;
+    padding: 6px;
+    position: relative;
+}
+.switcher {
+    background-color: #fff;
+    position: absolute;
+    top: 5px;
+    left: 2px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+.moon {
+    color: #ffa502;
+  }
+  
+.sun {
+    color: #ff4757;
+}
+.checkbox:checked + .label .switcher {
+    transform: translateX(24px);
+}
+
+/*Dark*/
+body.dark {
+    background-color: #1e272e;
+}
+
+body.dark .bar {
+    background-color: #fff;
+}
+
+body.dark p {
+    color: #fff;
+}
+
+body.dark h3 {
+    color: #fff;
+}
+
+body.dark nav {
+    background-color: #1e272e;
+    box-shadow: 2px 3px 2px #111010;
+}
+
+body.dark .role {
+    color: var(--secondary-color);
+}
+
+body.dark footer {
+    color: #fff;
+    border-top: 1px solid #111010;
+    box-shadow: 0px -2px 3px #111010;
+}
+
+  
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+  }
+  
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
