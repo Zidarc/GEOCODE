@@ -47,7 +47,7 @@
 .team-page {
     width: 100%;
     background-color: #000000;
-    background-image: url('./images/stars.png');
+    background-image: url('../images/stars.jpeg');
     background-size: cover;
     background-attachment: fixed;
 }
