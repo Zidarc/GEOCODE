@@ -1,33 +1,35 @@
+/* Import Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
 
-/* CSS Variables */
+/* Define CSS Variables */
 :root {
-    --primary-color: #4169E1;     /* Royal Blue */
-    --secondary-color: #1b0047;    /* White */
-    --accent-color: #FFD700;       /* Gold */
-    --background-color: #F5F5F5;  /* Light Gray */
-    --text-color: #333333;         /* Dark Gray */
-    --highlight-color: #008080;    /* Teal */
-    --neutral-color: #C0C0C0;     /* Silver */
+    /* Color variables */
+    --primary-color: #4169E1;
+    --secondary-color: #1b0047;
+    --accent-color: #FFD700;
+    --background-color: #F5F5F5;
+    --text-color: #333333;
+    --highlight-color: #008080;
+    --neutral-color: #C0C0C0;
     --line-height: 1.7rem;
     --normal-font: 400;
     --bold-font: 600;
     --bolder-font: 900;
 }
 
-
-/* Resets */
+/* Reset Default Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Base Styles */
 body {
-    font-family: "Roboto", sans-serf;
+    font-family: "Roboto", sans-serif;
 }
 
-/*Header*/
+/* Header Styles */
 nav {
     background: #fff;
     display: flex;
@@ -39,7 +41,7 @@ nav {
 .nav-item {
     margin-left: 2rem;
 }
-  
+
 .nav-link {
     font-weight: var(--bold-font);
 }
@@ -51,7 +53,7 @@ a {
 
 a:hover {
     color: var(--secondary-color);
-} 
+}
 
 ul {
     display: flex;
@@ -67,15 +69,34 @@ ul li {
     font-size: 2rem;
     font-weight: 500;
 }
-.GEO {
-    color: var(--secondary-color);
-}
-  
-.CODE {
-    color: var(--primary-color);
-}
 
-/*Main*/
+/* Responsive Styles for Header */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .nav-item {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+
+    ul {
+        flex-direction: column;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+    p {
+        font-size: 5px;
+    }
+}
+p {
+    font-size: 20px;
+}
+/* Main Content Styles */
 .container {
     display: flex;
     height: 80vh;
@@ -88,29 +109,65 @@ ul li {
 }
 
 .content {
-    flex: 40%; /* 40% of the available width */
+    flex: 39%;
 }
 
 #map {
-    flex: 50%; /* 40% of the available width */
+    flex: 50%;
     z-index: 1;
 }
 
 .legend {
-    flex: 10%; /* 20% of the available width */
-    padding-left: 1rem;    
+    flex: 11%;
+    padding-left: 1rem;
 }
 
-/*Table*/
+/* Responsive Styles for Main Content */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .borderRight {
+        border-right: none;
+    }
+
+    .map {
+        flex: 100%;
+        padding: 10rem;
+        height: 100px;
+    }
+    .content, .legend {
+        width: 100%;
+        padding: 2rem;
+    }
+}
+
+/* Table Styles */
 tr {
     padding-bottom: 1rem;
 }
+
 td {
     border-radius: 100%;
 }
 
+/* Responsive Styles for Table */
+@media screen and (max-width: 768px) {
+    tr {
+        display: block;
+        margin-bottom: 1rem;
+        width: fit-content;
+    }
 
-/*Footer*/
+    td {
+        width: 10px;
+        padding-left: 1rem;
+    }
+}
+
+/* Footer Styles */
 footer {
     border-top: 1px solid #f1f1f1;
     box-shadow: 0px -2px 3px #f1f1f1;
@@ -118,14 +175,21 @@ footer {
     padding: 2rem;
 }
 
-/*Light and Dark*/
+/* Light and Dark Theme Styles */
 .theme-switch {
     padding-left: 1rem;
 }
+@media screen and (max-width: 768px) {
+    .theme-switch {
+        padding-left: 0.5rem;
+    }
+}
+
 .checkbox {
     opacity: 0;
     position: absolute;
 }
+
 .label {
     width: 50px;
     height: 29px;
@@ -137,6 +201,7 @@ footer {
     padding: 6px;
     position: relative;
 }
+
 .switcher {
     background-color: #fff;
     position: absolute;
@@ -146,18 +211,20 @@ footer {
     width: 20px;
     border-radius: 50%;
 }
+
 .moon {
     color: #ffa502;
-  }
-  
+}
+
 .sun {
     color: #ff4757;
 }
+
 .checkbox:checked + .label .switcher {
     transform: translateX(24px);
 }
 
-/*Dark*/
+/* Dark Theme Styles */
 body.dark {
     background-color: #1e272e;
 }
@@ -189,4 +256,4 @@ body.dark footer {
     box-shadow: 0px -2px 3px #111010;
 }
 
-/*Responsive*/
+/* Responsive Styles */
