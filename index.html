@@ -1,88 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <link rel="stylesheet" href="./map1/css/leaflet.css">
-        <link rel="stylesheet" href="./map1/css/L.Control.Locate.min.css">
-        <link rel="stylesheet" href="./map1/css/qgis2web.css">
-        <link rel="stylesheet" href="./map1/css/fontawesome-all.min.css">
-        <link rel="stylesheet" href="./map1/css/leaflet-control-geocoder.Geocoder.css">
-        <link rel="stylesheet" href="./map1/css/leaflet-measure.css">
-
-        <link rel="stylesheet" href="./assets/css/index.css">
-        <title>GEOCODE Workshop</title>
-    </head>
-    <body>
-        <header>
-            <nav>
-                <a href="./index.html" class="logo">
-                  <h1>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="./map1/css/leaflet.css">
+    <link rel="stylesheet" href="./map1/css/L.Control.Locate.min.css">
+    <link rel="stylesheet" href="./map1/css/qgis2web.css">
+    <link rel="stylesheet" href="./map1/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="./map1/css/leaflet-control-geocoder.Geocoder.css">
+    <link rel="stylesheet" href="./map1/css/leaflet-measure.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <title>GEOCODE Workshop</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="./index.html" class="logo">
+                <h1>
                     <span class="GEO">GEO</span><span class="CODE">CODE</span>
-                  </h1>
-                </a>
-                <ul>
-                    <li class="nav-item">
-                      <a href="./pages/blog.html" class="nav-link"><h3>Blog</h3></a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="./pages/credit.html" class="nav-link"><h3>Credits</h3></a>
-                    </li>
-                </ul>
-                <div class="theme-switch">
-                    <input type="checkbox" class="checkbox" id="checkbox" />
-                    <label for="checkbox" class="label">
-                        <ion-icon name="partly-sunny-outline" class="sun"></ion-icon>
-                        <ion-icon name="moon-outline" class="moon"></ion-icon>
-                       <div class="switcher"></div>
-                    </label>
-                </div>
-            </nav>
-        </header>
-        <main>
-            <div class="container">
-                <div class="content borderRight"><h3>Div 1</h3></div>
-                <div id="map">
-                </div>
-                <div class="legend">
-                    <table>
-                        <tr>
-                          <td style="background-color:red; width:15px"></td>
-                          <td><h3>- Red</h3></td>
-                        </tr>
-                        <tr>
-                            <td style="background-color:blue; width:15px"></td>
-                            <td><h3>- Blue</h3></td>
-                        </tr>
-                      </table>
-                </div>
+                </h1>
+            </a>
+            <ul>
+                <li class="nav-item">
+                    <a href="./pages/blog.html" class="nav-link"><h3>Blog</h3></a>
+                </li>
+                <li class="nav-item">
+                    <a href="./pages/credit.html" class="nav-link"><h3>Credits</h3></a>
+                </li>
+                <li class="nav-item">
+                    <a href="./pages/gallery.html" class="nav-link"><h3>Gallery</h3></a>
+                </li>
+            </ul>
+            <div class="theme-switch">
+                <input type="checkbox" class="checkbox" id="checkbox" />
+                <label for="checkbox" class="label">
+                    <ion-icon name="partly-sunny-outline" class="sun"></ion-icon>
+                    <ion-icon name="moon-outline" class="moon"></ion-icon>
+                    <div class="switcher"></div>
+                </label>
             </div>
-        </main>
-        <footer>&copy;2023. All Rights Reserved GEOCODE Workshop</footer>   
-        <script src="./assets/js/index.js"></script>
-        <script
-            type="module"
-            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js">
-        </script>
-        <script src="map1/js/qgis2web_expressions.js"></script>
-        <script src="map1/js/leaflet.js"></script>
-        <script src="map1/js/L.Control.Locate.min.js"></script>
-        <script src="map1/js/leaflet.rotatedMarker.js"></script>
-        <script src="map1/js/leaflet.pattern.js"></script>
-        <script src="map1/js/leaflet-hash.js"></script>
-        <script src="map1/js/Autolinker.min.js"></script>
-        <script src="map1/js/rbush.min.js"></script>
-        <script src="map1/js/labelgun.min.js"></script>
-        <script src="map1/js/labels.js"></script>
-        <script src="map1/js/leaflet-control-geocoder.Geocoder.js"></script>
-        <script src="map1/js/leaflet-measure.js"></script>
-        <script src="map1/data/amenity_school_Karachi_10000_1.js"></script>
-        <script src="map1/data/amenity_university_Karachi_15000_2.js"></script>
-        <script src="map1/data/Custom_education_institutes_3.js"></script>
-        <script src="map1/data/amenity_college_Karachi_10000_4.js"></script>
-        <script src="map1/js/map1_user.js"></script>
-    </body>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="content borderRight">
+                <br>
+                <p>As depicted in the section of the screen, there is a graphical representation in the form of a map showcasing various educational institutions.</p> 
+                <br>
+                <p>To view the names of these institutes, please click on the map.</p>
+            </div>
+            <div class="map" id="map"></div>
+            <div class="legend">
+                <table>
+                    <tr>
+                        <td style="background-color:red; width:15px"></td>
+                        <td><p>- University</p></td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:blue; width:15px"></td>
+                        <td><p>- School</p></td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:orange; width:15px"></td>
+                        <td><p>- College</p></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </main>
+    <footer>&copy;2023. All Rights Reserved GEOCODE Workshop</footer>   
+    <script src="./assets/js/index.js"></script>
+    <script
+        type="module"
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js">
+    </script>
+    <script src="map1/js/qgis2web_expressions.js"></script>
+    <script src="map1/js/leaflet.js"></script>
+    <script src="map1/js/L.Control.Locate.min.js"></script>
+    <script src="map1/js/leaflet.rotatedMarker.js"></script>
+    <script src="map1/js/leaflet.pattern.js"></script>
+    <script src="map1/js/leaflet-hash.js"></script>
+    <script src="map1/js/Autolinker.min.js"></script>
+    <script src="map1/js/rbush.min.js"></script>
+    <script src="map1/js/labelgun.min.js"></script>
+    <script src="map1/js/labels.js"></script>
+    <script src="map1/js/leaflet-control-geocoder.Geocoder.js"></script>
+    <script src="map1/js/leaflet-measure.js"></script>
+    <script src="map1/data/amenity_school_Karachi_10000_1.js"></script>
+    <script src="map1/data/amenity_university_Karachi_15000_2.js"></script>
+    <script src="map1/data/Custom_education_institutes_3.js"></script>
+    <script src="map1/data/amenity_college_Karachi_10000_4.js"></script>
+    <script src="map1/js/map1_user.js"></script>
+</body>
 </html>
