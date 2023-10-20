@@ -1,8 +1,8 @@
 // Sample data for recipes
 let recipes = [
-    { name: "Spaghetti Carbonara", ingredients: "Spaghetti, Eggs, Pancetta, Parmesan, Cheese, Black Pepper"},
-    { name: "Chicken Alfredo", ingredients: "Chicken, Fettuccine Pasta, Heavy Cream, Parmesan Cheese, Garlic" },
-    { name: "Chocolate Chip Cookies", ingredients: "Flour, Sugar, Butter, Chocolate Chips, Vanilla Extract" },
+    { name: "Polar Bears Are Not Actually White", ingredients: "Polar bears have black skin beneath their fur, which helps them absorb and retain heat in their frigid Arctic environment."},
+    { name: "Honey Never Spoils", ingredients: " Archaeologists have found pots of honey in ancient Egyptian tombs that are over 3,000 years old and still perfectly edible." },
+    { name: "Octopuses Have Three Hearts", ingredients: " Octopuses have two gills and three hearts, with two pumping blood to the gills and one pumping oxygenated blood to the rest of their body." },
 ];
 
 // Function to display recipes
@@ -17,7 +17,7 @@ function displayRecipes() {
         const listItem = document.createElement("li");
         listItem.innerHTML = `
             <h3>${recipe.name}</h3>
-            <p>Ingredients: ${recipe.ingredients}</p>
+            <p> ${recipe.ingredients}</p>
             <button onclick="editRecipe(${index})">Edit</button>
             <button onclick="deleteRecipe(${index})">Delete</button>
         `;
@@ -43,7 +43,7 @@ function addRecipe() {
 
 // Function to delete a recipe
 function deleteRecipe(index) {
-    if (confirm("Are you sure you want to delete this recipe?")) {
+    if (confirm("Are you sure you want to delete this fact?")) {
         recipes.splice(index, 1);
         displayRecipes();
     }
@@ -69,7 +69,7 @@ function displayFilteredRecipes(filteredRecipes) {
         const listItem = document.createElement("li");
         listItem.innerHTML = `
             <h3>${recipe.name}</h3>
-            <p>Ingredients: ${recipe.ingredients}</p>
+            <p>${recipe.ingredients}</p>
             <button onclick="editRecipe(${index})">Edit</button>
             <button onclick="deleteRecipe(${index})">Delete</button>
         `;
@@ -79,8 +79,8 @@ function displayFilteredRecipes(filteredRecipes) {
 
 // Function to edit a recipe
 function editRecipe(index) {
-    const editedRecipe = prompt("Edit the recipe name:", recipes[index].name);
-    const editedRecipeIng = prompt("Edit the recipe ingredients", recipes[index].ingredients)
+    const editedRecipe = prompt("Edit the fact heading:", recipes[index].name);
+    const editedRecipeIng = prompt("Edit the fact description:", recipes[index].ingredients)
     if (editedRecipe !== null && editedRecipe !== "") {
         recipes[index].name = editedRecipe;
         if (editedRecipeIng){
