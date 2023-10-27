@@ -1,12 +1,13 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- Document Type Declaration for HTML5 -->
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8"> <!-- Character Encoding: Specifies the character encoding for the document -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Document Compatibility for IE: Ensures compatibility with Internet Explorer -->
     <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <link rel="stylesheet" href="./map1/css/leaflet.css">
+    <!-- Viewport Configuration: Sets initial scale and prevents user scaling -->
+    <meta name="mobile-web-app-capable" content="yes"> <!-- Mobile Web App Capability: Allows web app installation on mobile devices -->
+    <meta name="apple-mobile-web-app-capable" content="yes"> <!-- Apple Mobile Web App Capability: Enables installation on iOS devices -->
+    <link rel="stylesheet" href="./map1/css/leaflet.css"> <!-- Linking External Stylesheets: Importing CSS stylesheets -->
     <link rel="stylesheet" href="./map1/css/L.Control.Locate.min.css">
     <link rel="stylesheet" href="./map1/css/qgis2web.css">
     <link rel="stylesheet" href="./map1/css/fontawesome-all.min.css">
@@ -14,25 +15,22 @@
     <link rel="stylesheet" href="./map1/css/leaflet-measure.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./assets/css/index.css">
-    <title>GEOCODE Workshop</title>
+    <title>GEOCODE Workshop</title> <!-- Page Title: Sets the title of the web page -->
 </head>
 <body>
     <header>
         <nav>
-            <a href="./index.html" class="logo">
+            <a href="./index.html" class="logo"> <!-- Creating Links: A hyperlink to the home page with a class "logo" -->
                 <h1>
-                    <span class="GEO">GEO</span><span class="CODE">CODE</span>
+                    <span class="GEO">GEO</span><span class="CODE">CODE</span> <!-- Basic HTML Elements: Heading with two spans -->
                 </h1>
             </a>
             <ul>
                 <li class="nav-item">
-                    <a href="./pages/blog.html" class="nav-link"><h3>Blog</h3></a>
+                    <a href="./pages/credit.html" class="nav-link"><h3>Credits</h3></a> <!-- Creating Links: Navigation link to "Credits" page -->
                 </li>
                 <li class="nav-item">
-                    <a href="./pages/credit.html" class="nav-link"><h3>Credits</h3></a>
-                </li>
-                <li class="nav-item">
-                    <a href="./pages/gallery.html" class="nav-link"><h3>Gallery</h3></a>
+                    <a href="./pages/gallery.html" class="nav-link"><h3>Gallery</h3></a> <!-- Creating Links: Navigation link to "Gallery" page -->
                 </li>
             </ul>
             <div class="theme-switch">
@@ -41,7 +39,7 @@
                     <ion-icon name="partly-sunny-outline" class="sun"></ion-icon>
                     <ion-icon name="moon-outline" class="moon"></ion-icon>
                     <div class="switcher"></div>
-                </label>
+                </label> <!-- HTML Forms and Input Elements: Theme switch with checkbox and labels -->
             </div>
         </nav>
     </header>
@@ -50,34 +48,37 @@
             <div class="content borderRight">
                 <br>
                 <p>As depicted in the section of the screen, there is a graphical representation in the form of a map showcasing various educational institutions.</p> 
+                <!-- Basic HTML Elements: Paragraphs -->
                 <br>
                 <p>To view the names of these institutes, please click on the map.</p>
             </div>
-            <div class="map" id="map"></div>
+            <div class="map" id="map"></div> <!-- Semantic HTML: Proper use of semantic elements (div with class "map") -->
             <div class="legend">
-                <table>
+                <p style="text-align: center; font-weight: bold;">Legend</p>
+                <table class="table">
                     <tr>
-                        <td style="background-color:red; width:15px"></td>
-                        <td><p>- University</p></td>
+                        <td style="background-color:red;"></td>
+                        <td><p>Universities</p></td>
                     </tr>
                     <tr>
-                        <td style="background-color:blue; width:15px"></td>
-                        <td><p>- School</p></td>
+                        <td style="background-color:blue;"></td>
+                        <td><p>Schools</p></td>
                     </tr>
                     <tr>
-                        <td style="background-color:orange; width:15px"></td>
-                        <td><p>- College</p></td>
+                        <td style="background-color:orange;"></td>
+                        <td><p>Colleges</p></td>
                     </tr>
-                </table>
+                </table> <!-- Semantic HTML: Proper use of semantic elements (table for legend) -->
             </div>
         </div>
     </main>
-    <footer>&copy;2023. All Rights Reserved GEOCODE Workshop</footer>   
-    <script src="./assets/js/index.js"></script>
+    <footer>&copy;2023. All Rights Reserved GEOCODE Workshop</footer> <!-- Semantic HTML: Proper use of semantic elements (footer) -->
+    <script src="./assets/js/index.js"></script> <!-- Basic HTML Elements: Script inclusion -->
     <script
         type="module"
         src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js">
-    </script>
+    </script> <!-- Basic HTML Elements: Script inclusion with attributes -->
+    <!-- Many more script inclusions for JavaScript libraries and data sources -->
     <script src="map1/js/qgis2web_expressions.js"></script>
     <script src="map1/js/leaflet.js"></script>
     <script src="map1/js/L.Control.Locate.min.js"></script>
