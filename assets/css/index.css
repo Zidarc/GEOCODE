@@ -28,6 +28,9 @@
 body {
     font-family: "Roboto", sans-serif;
 }
+body, nav, footer {
+    transition: background-color 0.3s ease;
+}
 
 /* Header Styles */
 nav {
@@ -44,6 +47,7 @@ nav {
 
 .nav-link {
     font-weight: var(--bold-font);
+    transition: color 1s ease;
 }
 
 a {
@@ -68,6 +72,13 @@ ul li {
 .logo {
     font-size: 2rem;
     font-weight: 500;
+}
+.sun, .moon {
+    transition: transform 0.3s ease; /* Add transition effect */
+}
+
+.sun:hover, .moon:hover {
+    transform: rotate(90deg); /* Rotate on hover */
 }
 
 /* Responsive Styles for Header */
@@ -94,7 +105,7 @@ ul li {
     }
 }
 p {
-    font-size: 20px;
+    font-size: 1rem;
 }
 /* Main Content Styles */
 .container {
@@ -118,7 +129,7 @@ p {
 }
 
 .legend {
-    flex: 11%;
+    flex: 15%;
     padding-left: 1rem;
 }
 
@@ -145,19 +156,14 @@ p {
 }
 
 /* Table Styles */
-tr {
-    padding-bottom: 1rem;
-}
-
-td {
-    border-radius: 100%;
-}
+table tr td {
+    width: 10%;
+ }
 
 /* Responsive Styles for Table */
 @media screen and (max-width: 768px) {
     tr {
         display: block;
-        margin-bottom: 1rem;
         width: fit-content;
     }
 
