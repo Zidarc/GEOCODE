@@ -4,17 +4,17 @@
 /* Define CSS Variables */
 :root {
     /* Color variables */
-    --primary-color: #4169E1;
-    --secondary-color: #1b0047;
-    --accent-color: #FFD700;
-    --background-color: #F5F5F5;
-    --text-color: #333333;
-    --highlight-color: #008080;
-    --neutral-color: #C0C0C0;
-    --line-height: 1.7rem;
-    --normal-font: 400;
-    --bold-font: 600;
-    --bolder-font: 900;
+    --primary-color: #4169E1;        /* Primary color (e.g., blue) */
+    --secondary-color: #1b0047;      /* Secondary color (e.g., dark purple) */
+    --accent-color: #FFD700;         /* Accent color (e.g., gold) */
+    --background-color: #F5F5F5;    /* Background color (e.g., light gray) */
+    --text-color: #333333;           /* Text color (e.g., dark gray) */
+    --highlight-color: #008080;     /* Highlight color (e.g., teal) */
+    --neutral-color: #C0C0C0;       /* Neutral color (e.g., silver) */
+    --line-height: 1.7rem;           /* Line height */
+    --normal-font: 400;             /* Normal font weight */
+    --bold-font: 600;               /* Bold font weight */
+    --bolder-font: 900;             /* Bolder font weight */
 }
 
 /* Reset Default Styles */
@@ -28,31 +28,34 @@
 body {
     font-family: "Roboto", sans-serif;
 }
+body, nav, footer {
+    transition: background-color 0.3s ease;
+}
 
 /* Header Styles */
 nav {
-    background: #fff;
+    background: #fff;               /* Background color for the navigation bar */
     display: flex;
     align-items: center;
     padding: 1rem 1.5rem;
-    box-shadow: 2px 3px 2px #f1f1f1;
+    box-shadow: 2px 3px 2px #f1f1f1; /* Box shadow for the navigation bar */
 }
 
 .nav-item {
-    margin-left: 2rem;
+    margin-left: 2rem;               /* Spacing between navigation items */
 }
 
 .nav-link {
-    font-weight: var(--bold-font);
+    font-weight: var(--bold-font);    /* Font weight for navigation links */
 }
 
 a {
-    text-decoration: none;
-    color: var(--primary-color);
+    text-decoration: none;            /* Remove underlines from anchor links */
+    color: var(--primary-color);     /* Text color for anchor links */
 }
 
 a:hover {
-    color: var(--secondary-color);
+    color: var(--secondary-color);   /* Text color for anchor links on hover */
 }
 
 ul {
@@ -62,12 +65,12 @@ ul {
 }
 
 ul li {
-    list-style-type: none;
+    list-style-type: none;            /* Remove list-style (bullets) from list items */
 }
 
 .logo {
     font-size: 2rem;
-    font-weight: 500;
+    font-weight: 500;                /* Font size and weight for the logo */
 }
 
 /* Responsive Styles for Header */
@@ -96,33 +99,37 @@ ul li {
 p {
     font-size: 20px;
 }
+
 /*Footer*/
 footer {
-    border-top: 1px solid #f1f1f1;
-    box-shadow: 0px -2px 3px #f1f1f1;
-    text-align: center;
-    padding: 2rem;
+    border-top: 1px solid #f1f1f1;  /* Top border for the footer */
+    box-shadow: 0px -2px 3px #f1f1f1; /* Box shadow for the footer */
+    text-align: center;             /* Center-align text in the footer */
+    padding: 2rem;                  /* Padding for the footer content */
 }
 
-/*Light and Dark*/
+/*Light and Dark Theme Styles */
 .theme-switch {
-    padding-left: 1rem;
+    padding-left: 1rem;             /* Spacing for the theme switch */
 }
+
 .checkbox {
-    opacity: 0;
+    opacity: 0;                    /* Make the checkbox invisible */
     position: absolute;
 }
+
 .label {
     width: 50px;
     height: 29px;
-    background-color: #111;
+    background-color: #111;         /* Background color for the switch label */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-radius: 30px;
+    border-radius: 30px;            /* Rounded corners for the switch label */
     padding: 6px;
     position: relative;
 }
+
 .switcher {
     background-color: #fff;
     position: absolute;
@@ -130,22 +137,24 @@ footer {
     left: 2px;
     height: 20px;
     width: 20px;
-    border-radius: 50%;
+    border-radius: 50%;             /* Round shape for the switch button */
 }
+
 .moon {
     color: #ffa502;
-  }
-  
+}
+
 .sun {
     color: #ff4757;
 }
+
 .checkbox:checked + .label .switcher {
-    transform: translateX(24px);
+    transform: translateX(24px);   /* Move the switch button when checked */
 }
 
-/*Dark*/
+/*Dark Theme Styles */
 body.dark {
-    background-color: #1e272e;
+    background-color: #1e272e;     /* Background color for dark mode */
 }
 
 body.dark .bar {
@@ -153,7 +162,7 @@ body.dark .bar {
 }
 
 body.dark p {
-    color: #fff;
+    color: #fff;                   /* Text color in dark mode */
 }
 
 body.dark h3 {
@@ -161,60 +170,68 @@ body.dark h3 {
 }
 
 body.dark nav {
-    background-color: #1e272e;
-    box-shadow: 2px 3px 2px #111010;
+    background-color: #1e272e;    /* Navigation bar background color in dark mode */
+    box-shadow: 2px 3px 2px #111010; /* Box shadow for the navigation bar in dark mode */
 }
 
 body.dark .role {
-    color: var(--secondary-color);
+    color: var(--secondary-color); /* Text color for a specific role element in dark mode */
 }
 
 body.dark footer {
-    color: #fff;
-    border-top: 1px solid #111010;
-    box-shadow: 0px -2px 3px #111010;
+    color: #fff;                   /* Text color for the footer in dark mode */
+    border-top: 1px solid #111010;  /* Top border for the footer in dark mode */
+    box-shadow: 0px -2px 3px #111010; /* Box shadow for the footer in dark mode */
+}
+body.dark h2 {
+    color: #fff;                   /* Text color for h2 elements in dark mode */
 }
 
-  
-  div.gallery:hover {
-    border: 1px solid #777;
-  }
-  
-  div.gallery img {
+/*Gallery Styles*/
+h2, p, footer, nav {
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;            /* Border for gallery images on hover */
+}
+
+div.gallery img {
     width: 100%;
-    height: auto;
-  }
-  
-  div.desc {
+    height: auto;                      /* Make gallery images responsive */
+}
+
+div.desc {
     padding: 15px;
     text-align: center;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  .responsive {
+}
+
+* {
+    box-sizing: border-box;              /* Use border-box model for sizing elements */
+}
+
+.responsive {
     padding: 0 6px;
     float: left;
-    width: 24.99999%;
-  }
-  
-  @media only screen and (max-width: 700px) {
+    width: 24.99999%;                   /* Set width for responsive gallery items */
+}
+
+@media only screen and (max-width: 700px) {
     .responsive {
-      width: 49.99999%;
-      margin: 6px 0;
+        width: 49.99999%;
+        margin: 6px 0;
     }
-  }
-  
-  @media only screen and (max-width: 500px) {
+}
+
+@media only screen and (max-width: 500px) {
     .responsive {
-      width: 100%;
+        width: 100%;
     }
-  }
-  
-  .clearfix:after {
+}
+
+.clearfix:after {
     content: "";
     display: table;
-    clear: both;
-  }
+    clear: both;                       /* Clear floated elements in the gallery */
+}
