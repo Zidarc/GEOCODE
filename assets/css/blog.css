@@ -1,6 +1,6 @@
 :root {
     --primary-color: #4169E1;     /* Royal Blue */
-    --secondary-color: #1b0047;    /* White */
+    --secondary-color: #1b0047;    /* Dark Blue */
     --accent-color: #FFD700;       /* Gold */
     --background-color: #F5F5F5;  /* Light Gray */
     --text-color: #333333;         /* Dark Gray */
@@ -8,145 +8,148 @@
     --neutral-color: #C0C0C0;
 }
 
+/* Reset margin and padding for multiple HTML elements */
 body, h1, h2, ul, li, p, button {
-    margin: 0 0;
-    padding: 0 0;
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
 }
 
 /* Basic styling for the page */
 body {
     font-family: Arial, sans-serif;
     background-color: var(--background-color);
-    color: #333;
+    color: var(--text-color);
     line-height: 1.6;
     margin: 0 auto;
-    max-width: 70%;
-    padding: 20px;
-    ;
+    max-width: 70%; /* Limit page width */
+    padding: 20px; /* Add padding around the content */
 }
 
 h1 {
-    font-size: 2rem;
-    color: darkblue;
+    font-size: 2rem; /* Set font size for h1 */
+    color: darkblue; /* Set text color for h1 */
 }
 
 h2 {
-    font-size: 1.5rem;
-    margin-top: 1.25rem;
+    font-size: 1.5rem; /* Set font size for h2 */
+    margin-top: 1.25rem; /* Add margin above h2 */
 }
 
 ul {
-    list-style: none;
+    list-style: none; /* Remove list bullets */
 }
 
 button {
-    background-color: var(--primary-color);
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    margin-top: 10px;
-    border-radius: 25%;
+    background-color: var(--primary-color); /* Set background color for button */
+    color: #fff; /* Set text color for button */
+    border: none; /* Remove button border */
+    padding: 10px 20px; /* Define button padding */
+    cursor: pointer; /* Change cursor on hover */
+    margin-top: 10px; /* Add margin above the button */
+    border-radius: 25%; /* Add border radius for a rounded look */
 }
 
 button:hover {
-    background-color: var(--secondary-color);
+    background-color: var(--secondary-color); /* Change background color on hover */
 }
-#recipeNameInput{
-    width: 200px;
+
+#recipeNameInput {
+    width: 200px; /* Set the width of an input element by ID */
 }
-#recipeItemInput{
-    width: 400px;
+
+#recipeItemInput {
+    width: 400px; /* Set the width of an input element by ID */
 }
+
 .image {
-    position:absolute;
-    top: 0;
-    left: 0;
-    border-radius: 50%;
-    overflow: hidden;
+    position: absolute; /* Set image positioning to absolute */
+    top: 0; /* Position image at the top */
+    left: 0; /* Position image at the left */
+    border-radius: 50%; /* Make the image a circle with rounded corners */
+    overflow: hidden; /* Hide any overflowing content inside the image container */
 }
+
 .container {
     position: relative; /* Make the container a positioning context */
-    background-color: #96c8fd; /* Optional: Add a background color to the container */
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    color: #000000
-    
+    background-color: #96c8fd; /* Set background color for the container */
+    color: #fff; /* Set text color inside the container */
+    text-align: center; /* Center-align the content inside the container */
+    padding: 10px 0; /* Add padding to the container */
+    color: #000000; /* Override text color to black */
 }
-/* Add transition to li elements */
+
+/* Add transition effect to list items on hover */
 li {
-    background-color: #ffe8ca;
-    border: 1px solid #000000;
-    padding: 10px;
-    margin: 10px 0;
-    transition: transform 0.3s ease;
+    background-color: #ffe8ca; /* Set background color for list items */
+    border: 1px solid #000000; /* Add border around list items */
+    padding: 10px; /* Set padding for list items */
+    margin: 10px 0; /* Add margin around list items */
+    transition: transform 0.3s ease; /* Add a smooth scaling transition on hover */
 }
 
 li:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Enlarge the list item on hover */
 }
 
 input[type="text"] {
-    width: 70%;
-    padding: 10px;
-    margin: 5px 0;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+    width: 70%; /* Set the width of text input elements */
+    padding: 10px; /* Define padding for text input elements */
+    margin: 5px 0; /* Add margin around text input elements */
+    border: 2px solid #ccc; /* Set border style */
+    border-radius: 5px; /* Add border radius for a rounded look */
+    font-size: 16px; /* Set font size for text input elements */
 }
 
 input[type="text"]::placeholder {
-    color: #999;
+    color: #999; /* Set placeholder text color */
 }
 
 input[type="text"]:hover {
-    border-color: #666;
+    border-color: #666; /* Change border color on hover */
 }
 
 input[type="text"]:focus {
-    outline: none;
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none; /* Remove input focus outline */
+    border-color: #007bff; /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a box shadow on focus */
 }
 
 /* Style for the button */
 button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    background-color: #007bff; /* Set background color for the button */
+    color: #fff; /* Set text color for the button */
+    padding: 10px 20px; /* Define button padding */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Add border radius for a rounded look */
+    font-size: 16px; /* Set font size for the button */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s ease; /* Add a smooth background color transition */
 }
 
 button:hover {
-    background-color: #002c5c;
-    transition:background-color 0.8s ease;
+    background-color: #002c5c; /* Change background color on hover */
+    transition: background-color 0.8s ease; /* Slow down background color transition on hover */
 }
 
 #filterDropdown {
     appearance: none; /* Remove default browser styles */
     padding: 10px; /* Adjust padding as needed */
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+    border: 2px solid #ccc; /* Set border style */
+    border-radius: 5px; /* Add border radius for a rounded look */
+    font-size: 16px; /* Set font size for the dropdown */
     width: 15%; /* Make the select element full width */
-    cursor: pointer;
-    background-color: #fff; /* Background color */
+    cursor: pointer; /* Change cursor style */
+    background-color: #fff; /* Set background color */
 }
 
-
 #filterDropdown:hover {
-    border-color: #666;
+    border-color: #666; /* Change border color on hover */
 }
 
 #filterDropdown:focus {
-    outline: none;
-    border-color: #007bff;
-    box-shadow: 0 0 10px rgba(0, 123, 255,0.5);
+    outline: none; /* Remove focus outline */
+    border-color: #007bff; /* Change border color on focus */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Add a box shadow on focus */
 }
 
 #filterDropdown option {
@@ -155,7 +158,6 @@ button:hover {
 }
 
 #filterDropdown option:checked {
-    background-color: #007bff; /* Background color of selected option */
-    color: #fff; /* Text color of selected option */
+    background-color: #007bff; /* Background color of the selected option */
+    color: #fff; /* Text color of the selected option */
 }
-
